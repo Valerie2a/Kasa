@@ -1,0 +1,28 @@
+@use './variables';
+
+.kasa-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: variables.$padding-normal;
+
+  .kasa-logo {
+    height: 60px;
+  }
+
+  .kasa-nav {
+    display: flex;
+    gap: 40px;
+
+    .nav-link {
+      text-decoration: none;
+      color: variables.$text-dark;
+      font-size: variables.$font-size-normal;
+      font-weight: bold;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
