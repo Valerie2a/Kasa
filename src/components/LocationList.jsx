@@ -8,6 +8,7 @@ function LocationList() {
       {logements.map((location) => (
         <LocationItem
           key={location.id}
+          id={location.id}
           titre={location.titre || location.title}
           couverture={location.couverture}
         />

@@ -1,0 +1,25 @@
+@use './variables';
+.Error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1240px;
+}
+.Error-title {
+  font-size: 120px;
+  color: variables.$primary-color;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding-block: 10px;
+}
+.Error-content {
+  color: variables.$primary-color;
+  padding-bottom: 50px;
+}
+.Link {
+  color: variables.$text-dark;
+  font-size: 10px;
+  text-decoration-line: underline;
+  padding-bottom: 50px;
+}

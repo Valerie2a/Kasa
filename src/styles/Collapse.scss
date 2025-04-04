@@ -1,0 +1,63 @@
+@use './variables';
+
+.collapses {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.collapse {
+  width: 1023px;
+  background-color: variables.$primary-color;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: variables.$primary-color;
+    padding: 1rem;
+    font-size: 18px;
+    font-weight: 700;
+    color: variables.$text-light;
+    cursor: pointer;
+  }
+
+  &__icon {
+    &__close {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: white;
+    color: #333;
+    transition: all 0.4s ease;
+  }
+
+  &.active &__content {
+    max-height: 500px;
+    opacity: 1;
+    padding: 1rem;
+  }
+}
+
+.rotated {
+  transform: rotate(180deg);
+}

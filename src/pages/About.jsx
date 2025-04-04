@@ -1,16 +1,35 @@
-import {Routes, Route} from 'react-router-dom';
-import Home from '../pages/Home.jsx';
-import About from '../pages/About.jsx';
-import Error from '../pages/Error.jsx';
+import HomeBanner from '../components/HomeBanner';
+import Collapse from '../components/Collapse';
+import aboutBanner from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
+import '../styles/About.scss';
 
-function Router() {
+function About() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/a-propos" element={<About />} />
-      <Route path="*" element={<Error />} />
-    </Routes>
+    <>
+      <div className="about-banner">
+        <HomeBanner image={aboutBanner} />
+      </div>
+
+      <section className="collapses">
+        <Collapse
+          title="Fiabilité"
+          content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
+        />
+        <Collapse
+          title="Respect"
+          content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
+        />
+        <Collapse
+          title="Service"
+          content="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
+        />
+        <Collapse
+          title="Sécurité"
+          content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
+        />
+      </section>
+    </>
   );
 }
 
-export default Router;
+export default About;

@@ -1,0 +1,9 @@
+@use './variables';
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}

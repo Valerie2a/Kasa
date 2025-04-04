@@ -1,13 +1,17 @@
+import {Link} from 'react-router-dom';
 import '../styles/Locations.scss';
-function LocationItem({titre, couverture}) {
+
+function LocationItem({id, titre, couverture}) {
   return (
     <li className="kasa-location-item">
-      <img
-        src={couverture}
-        alt={`Couverture de ${titre}`}
-        className="kasa-location-item-cover"
-      />
-      <p className="kasa-location-title">{titre}</p>
+      <Link to={`/logement/${id}`} className="kasa-location-link">
+        <img
+          src={couverture}
+          alt={`Couverture de ${titre}`}
+          className="kasa-location-item-cover"
+        />
+        <p className="kasa-location-title">{titre}</p>
+      </Link>
     </li>
   );
 }

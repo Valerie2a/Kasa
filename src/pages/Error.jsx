@@ -1,11 +1,15 @@
 import {Link} from 'react-router-dom';
-
+import '../styles/Error.scss';
 function Error() {
   return (
-    <div>
-      <h1>404 - Page non trouvée 😢</h1>
-      <p>La page que vous cherchez n'existe pas.</p>
-      <Link to="/">Retour à l'accueil</Link>
+    <div className="Error-page">
+      <h1 className="Error-title">404</h1>
+      <p className="Error-content">
+        Oups ! La page que vous demandez n'existe pas.
+      </p>
+      <Link className="Link" to="/">
+        Retourner sur la page d'accueil
+      </Link>
     </div>
   );
 }
