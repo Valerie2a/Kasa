@@ -4,10 +4,16 @@
   position: relative;
   width: 100%;
   max-width: 1240px;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto; // espace entre header et bannière
   height: 223px;
   border-radius: 15px;
   overflow: hidden;
+
+  @media (max-width: variables.$breakpoint-mobile) {
+    max-width: variables.$mobile-max-width;
+    height: variables.$banner-height;
+    margin: 2rem auto;
+  }
 }
 
 .img-banner {
@@ -24,13 +30,13 @@
   width: 100%;
   height: 100%;
   background: variables.$overlay-background;
-  opacity: 0.3;
+  opacity: 0.5;
   z-index: 1;
 }
 
 .banner-title {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: variables.$text-light;
@@ -38,4 +44,30 @@
   font-weight: bold;
   z-index: 2;
   text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: inline;
+  }
+
+  @media (max-width: variables.$breakpoint-mobile) {
+    left: 1rem;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: left;
+    font-size: variables.$font-size-normal;
+
+    .mobile-only {
+      display: inline;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+  }
 }

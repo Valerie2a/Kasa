@@ -5,9 +5,20 @@
   justify-content: space-between;
   align-items: center;
   padding: variables.$padding-normal;
+  @media (max-width: variables.$breakpoint-mobile) {
+    max-width: variables.$mobile-max-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
 
   .kasa-logo {
     height: 60px;
+
+    @media (max-width: variables.$breakpoint-mobile) {
+      height: 35px;
+    }
   }
 
   .kasa-nav {
@@ -19,9 +30,15 @@
       color: variables.$text-dark;
       font-size: variables.$font-size-normal;
       font-weight: bold;
+      text-transform: none; // par défaut (desktop)
 
       &.active {
         text-decoration: underline;
+      }
+
+      @media (max-width: variables.$breakpoint-mobile) {
+        font-size: variables.$font-size-xs;
+        text-transform: uppercase; // majuscules seulement sur mobile
       }
     }
   }

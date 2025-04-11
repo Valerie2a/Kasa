@@ -1,27 +1,21 @@
-import collapse__icon__close from '../assets/collapse__icon__close.png';
 import {useState} from 'react';
+import collapse__icon__close from '../assets/collapse__icon__close.png';
 import '../styles/Collapse.scss';
 
-function Collapse({title, content}) {
+function Collapse({title, content, id}) {
   const [active, setActive] = useState(false);
 
-  const handleToggle = () => {
-    setActive(!active);
-  };
-
   return (
-    <div className={`collapse ${active ? 'active' : ''}`}>
-      <div className="collapse__title" onClick={handleToggle}>
+    <div id={id} className={`collapse ${active ? 'active' : ''}`}>
+      <div className="collapse__title" onClick={() => setActive(!active)}>
         {title}
         <img
           src={collapse__icon__close}
-          alt="toggle icon"
-          className={`collapse__icon__close ${active ? 'rotated' : ''}`}
+          alt="chevron"
+          className={`collapse__icon ${active ? 'rotated' : ''}`}
         />
       </div>
-
-      {/* Affiche le contenu seulement si actif */}
-      {active && <div className="collapse__content">{content}</div>}
+      <div className="collapse__content">{content}</div>
     </div>
   );
 }

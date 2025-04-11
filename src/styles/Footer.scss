@@ -17,4 +17,11 @@
     color: variables.$text-light;
     font-size: 16px;
   }
+
+  @media (max-width: variables.$breakpoint-mobile) {
+    width: 100vw;
+    height: variables.$mobile-footer-height;
+    margin: 0;
+    border-radius: 0;
+  }
 }

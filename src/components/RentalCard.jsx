@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import '../styles/Locations.scss';
 
-function LocationItem({id, titre, couverture}) {
+function RentalCard({id, titre, couverture}) {
   return (
     <li className="kasa-location-item">
       <Link to={`/logement/${id}`} className="kasa-location-link">
@@ -16,4 +16,4 @@ function LocationItem({id, titre, couverture}) {
   );
 }
 
-export default LocationItem;
+export default RentalCard;

@@ -6,55 +6,59 @@
   gap: 2rem;
   align-items: center;
   margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 1023px;
+  box-sizing: border-box;
 }
-
 .collapse {
-  width: 1023px;
+  width: 100%;
   background-color: variables.$primary-color;
   border-radius: 10px;
-  overflow: hidden;
   font-family: 'Montserrat', sans-serif;
+  align-self: flex-start;
+  overflow: hidden;
   box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
+  transition: all 0.3s ease;
 
   &__title {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background-color: variables.$primary-color;
-    padding: 1rem;
+    color: variables.$text-light;
     font-size: 18px;
     font-weight: 700;
-    color: variables.$text-light;
+    padding: 1rem;
     cursor: pointer;
   }
 
   &__icon {
-    &__close {
-      width: 24px;
-      height: 24px;
-      transition: transform 0.3s ease;
-    }
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
   }
 
   &__content {
+    background-color: variables.$grey-light;
+    color: variables.$text-dark;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 1rem; // on enlève padding vertical ici
     max-height: 0;
     overflow: hidden;
-    opacity: 0;
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
-    background-color: white;
-    color: #333;
-    transition: all 0.4s ease;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   &.active &__content {
-    max-height: 500px;
-    opacity: 1;
-    padding: 1rem;
+    max-height: 1000px; // assez grand pour tout contenu
+    padding: 1rem; //seulement quand actif
+  }
+
+  &.inactive &__content {
+    max-height: 0;
   }
 }
 
