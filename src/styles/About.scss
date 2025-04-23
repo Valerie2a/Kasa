@@ -4,32 +4,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 0 variables.$padding-small;
   max-width: 1440px;
   margin: 0 auto;
 
   .about-banner {
     width: 100vw;
     max-width: 1240px;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
+    box-shadow: none;
+
+    img,
+    .banner-overlay {
+      box-shadow: none;
+    }
 
     @media (max-width: variables.$breakpoint-mobile) {
       max-width: variables.$mobile-max-width;
+      margin: 0 auto 0.5rem auto;
     }
   }
 
   .about-collapses {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 70%;
+    gap: 1rem;
+    width: 80%;
     max-width: 1023px;
-    margin: 2rem auto;
+    margin: 0 auto;
+    padding-top: 1rem;
 
     @media (max-width: variables.$breakpoint-mobile) {
       width: 100%;
       max-width: variables.$mobile-max-width;
-      padding: 0;
+      padding-top: 0.5rem;
+      margin: 0 auto;
+      gap: 0.7rem;
     }
   }
 }

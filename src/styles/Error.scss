@@ -10,7 +10,7 @@
 
   @media (max-width: variables.$breakpoint-mobile) {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 variables.$padding-small;
     box-sizing: border-box;
   }
 }
@@ -18,7 +18,7 @@
 .Error-page {
   max-width: 1024px;
   width: 100%;
-  padding: 2rem;
+  padding: variables.$padding-normal;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -29,9 +29,8 @@
 .Error-title {
   font-size: 120px;
   color: variables.$primary-color;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  padding-block: 10px;
+  padding-block: variables.$padding-small;
 
   @media (max-width: variables.$breakpoint-mobile) {
     font-size: 72px;
@@ -41,20 +40,20 @@
 .Error-content {
   color: variables.$primary-color;
   padding-bottom: 50px;
-  font-size: 18px;
+  font-size: variables.$font-size-l;
 
   @media (max-width: variables.$breakpoint-mobile) {
-    font-size: 14px;
+    font-size: variables.$font-size-normal;
   }
 }
 
 .Link {
   color: variables.$text-dark;
-  font-size: 16px;
+  font-size: variables.$font-size-s;
   text-decoration: underline;
   padding-bottom: 50px;
 
   @media (max-width: variables.$breakpoint-mobile) {
-    font-size: 14px;
+    font-size: variables.$font-size-xs;
   }
 }

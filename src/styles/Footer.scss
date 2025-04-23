@@ -1,27 +1,55 @@
 @use './variables';
 
 .kasa-footer {
-  background-color: black;
+  background-color: variables.$text-dark;
   height: variables.$footer-height;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  line-height: 0;
+  width: 100vw;
 
   .kasa-logo {
     height: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    @media (max-width: variables.$breakpoint-mobile) {
+      height: 35px;
+      margin-bottom: 0;
+    }
   }
 
   h2 {
     color: variables.$text-light;
-    font-size: 16px;
+    font-size: variables.$font-size-medium;
+    text-align: center;
+    @media (max-width: variables.$breakpoint-mobile) {
+      font-size: variables.$font-size-normal;
+    }
+  }
+
+  .mobile-only {
+    display: none;
+    @media (max-width: variables.$breakpoint-mobile) {
+      display: inline;
+      font-size: variables.$font-size-xs;
+      font-weight: 200;
+    }
+  }
+
+  .desktop-only {
+    display: inline;
+    @media (max-width: variables.$breakpoint-mobile) {
+      display: none;
+    }
   }
 
   @media (max-width: variables.$breakpoint-mobile) {
     width: 100vw;
     height: variables.$mobile-footer-height;
     margin: 0;
-    border-radius: 0;
+    padding: 1.7rem 0;
+    line-height: 1;
+    gap: 0;
   }
 }

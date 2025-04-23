@@ -4,6 +4,11 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: variables.$breakpoint-mobile) {
+    padding: 0;
+    align-items: center;
+  }
+
   .slider {
     position: relative;
     width: 100%;
@@ -14,6 +19,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
+
+    @media (max-width: variables.$breakpoint-mobile) {
+      width: variables.$mobile-max-width;
+      height: 255px;
+      padding-top: 15px;
+    }
 
     &__image {
       width: 100%;
@@ -35,6 +47,7 @@
       transform: translateY(-45%);
       outline: none;
       z-index: 2;
+
       &:focus {
         outline: none;
         box-shadow: none;
@@ -42,12 +55,12 @@
 
       &--left {
         left: 10px;
-        padding-left: 10px;
+        padding-left: variables.$padding-small;
       }
 
       &--right {
         right: 10px;
-        padding-right: 10px;
+        padding-right: variables.$padding-small;
       }
     }
 
@@ -74,30 +87,68 @@
         }
       }
     }
+  }
 
-    @media (max-width: 768px) {
-      height: 250px;
+  .logement-header,
+  .collapse-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 15px auto 0 auto;
+
+    @media (max-width: variables.$breakpoint-mobile) {
+      flex-direction: column;
+      max-width: variables.$mobile-max-width;
+      margin: 0 auto;
+      gap: 5px;
+    }
+  }
+
+  .collapse-container {
+    padding-bottom: 24px;
+    @media (max-width: variables.$breakpoint-mobile) {
+      padding-bottom: 0;
     }
   }
 
   .logement-header {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
     flex-wrap: wrap;
+    margin-bottom: 0;
+
+    @media (max-width: variables.$breakpoint-mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 5px;
+      padding-top: 5px;
+    }
 
     .logement-info {
       max-width: 70%;
 
+      @media (max-width: variables.$breakpoint-mobile) {
+        max-width: 100%;
+      }
+
       .titre {
-        font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 36px;
         color: variables.$primary-color;
+        @media (max-width: variables.$breakpoint-mobile) {
+          font-size: 28px;
+        }
       }
 
       .location {
         margin-top: 5px;
+        font-weight: bold;
+        @media (max-width: variables.$breakpoint-mobile) {
+          font-size: variables.$font-size-s;
+        }
       }
     }
 
@@ -106,12 +157,25 @@
       flex-direction: column;
       align-items: flex-end;
       justify-content: space-between;
+      gap: 35px;
+
+      @media (max-width: variables.$breakpoint-mobile) {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 15px;
+        padding-bottom: 10px;
+      }
 
       .host {
         display: flex;
         align-items: center;
-        gap: 10px;
-
+        gap: 12px;
+        color: variables.$primary-color;
+        @media (max-width: variables.$breakpoint-mobile) {
+          gap: 8px;
+        }
         .host-picture {
           width: 64px;
           height: 64px;
@@ -126,8 +190,10 @@
 
         .star {
           margin-right: 4px;
-          font-size: 1.2rem;
-
+          font-size: variables.$font-size-s;
+          @media (max-width: variables.$breakpoint-mobile) {
+            font-size: variables.$font-size-xs;
+          }
           &.filled {
             color: variables.$primary-color;
           }
@@ -136,6 +202,10 @@
             color: variables.$grey-medium;
           }
         }
+
+        @media (max-width: variables.$breakpoint-mobile) {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -143,56 +213,21 @@
   .tags-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
-
+    justify-content: flex-start;
+    gap: 12px;
+    margin: 16px 0;
+    max-width: 100%;
+    @media (max-width: variables.$breakpoint-mobile) {
+      margin: 12px 0;
+    }
     .tag {
       background-color: variables.$primary-color;
       color: white;
-      padding: 5px 15px;
+      padding: 4px 10px;
       border-radius: 10px;
-      font-size: 14px;
-      font-weight: 500;
-    }
-  }
-
-  .collapse-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
-
-    .collapse {
-      flex: 1;
-      align-self: flex-start;
-    }
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-
-      .collapse {
-        width: 100%;
-      }
-    }
-  }
-
-  @media (max-width: variables.$breakpoint-mobile) {
-    .logement-header {
-      .logement-host-rating {
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 20px;
-
-        .rating {
-          margin-top: 0;
-        }
-      }
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
     }
   }
 }

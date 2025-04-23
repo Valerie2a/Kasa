@@ -1,14 +1,16 @@
+// Import du logo et du style
 import logo from '../assets/logo.png';
-import '../styles/Banner.scss';
 import {NavLink} from 'react-router-dom';
+import '../styles/Banner.scss';
 
+// Composant d'en-tête avec logo et navigation
 function Banner() {
-  const title = 'Kasa';
   return (
     <header className="kasa-banner">
-      <img src={logo} alt="Kasa" className="kasa-logo" />
+      <img src={logo} alt="Logo Kasa" className="kasa-logo" />
       <nav className="kasa-nav">
-        <NavLink to="/" className="nav-link">
+        {/* Liens de navigation */}
+        <NavLink to="/" end className="nav-link">
           Accueil
         </NavLink>
         <NavLink to="/a-propos" className="nav-link">

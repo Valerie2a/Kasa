@@ -4,10 +4,11 @@
   position: relative;
   width: 100%;
   max-width: 1240px;
-  margin: 2rem auto 0 auto; // espace entre header et bannière
+  margin: 2rem auto 0 auto;
   height: 223px;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
   @media (max-width: variables.$breakpoint-mobile) {
     max-width: variables.$mobile-max-width;
@@ -45,7 +46,7 @@
   z-index: 2;
   text-align: center;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 variables.$padding-small;
 
   .mobile-only {
     display: none;
@@ -56,11 +57,11 @@
   }
 
   @media (max-width: variables.$breakpoint-mobile) {
-    left: 1rem;
+    left: 10px;
     top: 40%;
     transform: translateY(-50%);
     text-align: left;
-    font-size: variables.$font-size-normal;
+    font-size: variables.$font-size-s;
 
     .mobile-only {
       display: inline;

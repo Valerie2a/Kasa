@@ -1,6 +1,8 @@
+// Import du lien de navigation
 import {Link} from 'react-router-dom';
-import '../styles/Locations.scss';
+import '../styles/RentalList.scss';
 
+// Composant pour afficher une carte de location
 function RentalCard({id, titre, couverture}) {
   return (
     <li className="kasa-location-item">

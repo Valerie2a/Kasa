@@ -7,17 +7,23 @@ $grey-light: hsla(0, 0%, 97%, 1);
 $grey-medium: rgb(165, 157, 157);
 
 // Tailles de police
+$font-size-location: 0.85rem;
+$font-size-xxs: 0.8rem;
 $font-size-xs: 0.9rem;
-$font-size-normal: 1.2rem;
+$font-size-s: 1.2rem;
+$font-size-normal: 1.4rem;
+$font-size-medium: 1.6rem;
+$font-size-l: 1.8rem;
 $font-size-xl: 2.8rem;
 
 // Taille
-$mobile-footer-height: 200px;
-$footer-height: 150px;
+$mobile-footer-height: 220px;
+$footer-height: 200px;
 $banner-height: 111px;
 $mobile-max-width: 335px;
 
 // Espacements
+$padding-small: 10px;
 $padding-normal: 20px;
 $padding-large: 40px;
 $padding-xl: 60px;

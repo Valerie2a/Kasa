@@ -4,26 +4,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: variables.$padding-normal;
+  padding: 0;
+  margin: 2rem auto 0 auto;
+  width: 100%;
+  max-width: 1240px;
+
   @media (max-width: variables.$breakpoint-mobile) {
     max-width: variables.$mobile-max-width;
     width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 1.5rem;
+    padding: 0 variables.$padding-normal;
   }
 
   .kasa-logo {
     height: 60px;
 
     @media (max-width: variables.$breakpoint-mobile) {
-      height: 35px;
+      height: 40px;
     }
   }
 
   .kasa-nav {
     display: flex;
-    gap: 40px;
+    gap: 4rem;
+
+    @media (max-width: variables.$breakpoint-mobile) {
+      gap: 2rem;
+    }
 
     .nav-link {
       text-decoration: none;
@@ -33,7 +39,7 @@
       text-transform: none; // par défaut (desktop)
 
       &.active {
-        text-decoration: underline;
+        text-decoration: none;
       }
 
       @media (max-width: variables.$breakpoint-mobile) {
