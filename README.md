@@ -1,12 +1,20 @@
-# React + Vite
+# Kasa - Plateforme de location d'appartements entre particuliers 🏠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est réalisé dans le cadre de la formation **Développeur intégrateur web** chez OpenClassrooms. Il s’agit de la création du site web de **Kasa**, une application de location immobilière.
 
-Currently, two official plugins are available:
+## 🚀 Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Navigation entre plusieurs pages (Accueil, À propos, Fiche logement, 404)
+- Composants React réutilisables (`Collapse`, `Slider`, `Banner`, etc.)
+- Données dynamiques via un fichier JSON (`logements.json`)
+- Responsive design adapté aux formats desktop et mobile
+- Animation de transitions (chevrons `Collapse`, slider d’images, etc.)
+- Respect des maquettes Figma fournies
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies utilisées
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18** avec **Vite**
+- **React Router DOM**
+- **SASS (SCSS)** pour la gestion des styles
+- **FontAwesome** pour les icônes (étoiles de notation)
+- Respect des bonnes pratiques HTML / CSS / JS
