@@ -33,21 +33,33 @@
       object-fit: cover;
       border-radius: 10px;
       flex-shrink: 0;
+      @media (max-width: variables.$breakpoint-mobile) {
+        height: 90%;
+      }
     }
-
     &__arrow {
       position: absolute;
-      top: 40%;
+      top: 50%;
       cursor: pointer;
       background: none;
       border: none;
       color: variables.$text-light;
-      font-size: 9em;
       font-weight: 200;
       transform: translateY(-45%);
       outline: none;
       z-index: 2;
+      img {
+        width: 6rem;
+        height: 6rem;
+      }
 
+      @media (max-width: variables.$breakpoint-mobile) {
+        top: 50%;
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
       &:focus {
         outline: none;
         box-shadow: none;
@@ -55,12 +67,12 @@
 
       &--left {
         left: 10px;
-        padding-left: variables.$padding-small;
+        padding-left: 0;
       }
 
       &--right {
         right: 10px;
-        padding-right: variables.$padding-small;
+        padding-right: 0;
       }
     }
 
@@ -81,6 +93,10 @@
         border: 3px solid variables.$text-light;
         border-radius: 100%;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        @media (max-width: variables.$breakpoint-mobile) {
+          width: 9px;
+          height: 9px;
+        }
 
         &.dot-active {
           background-color: variables.$text-light;
@@ -124,7 +140,6 @@
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 5px;
-      padding-top: 5px;
     }
 
     .logement-info {

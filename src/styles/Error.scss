@@ -10,6 +10,7 @@
 
   @media (max-width: variables.$breakpoint-mobile) {
     width: 100%;
+    min-height: 65vh;
     padding: 0 variables.$padding-small;
     box-sizing: border-box;
   }

@@ -1,6 +1,8 @@
 // Import des dépendances
 import React, {useState} from 'react';
 import '../styles/Slider.scss';
+import arrow_back from '../assets/arrow_back.png';
+import arrow_forward from '../assets/arrow_forward.png';
 
 // Composant pour afficher un carrousel d'images
 function Slider({slides}) {
@@ -41,13 +43,13 @@ function Slider({slides}) {
             className="slider__arrow slider__arrow--left"
             onClick={goToPrevious}
           >
-            ‹
+            <img src={arrow_back} alt="Flèche gauche" />
           </button>
           <button
             className="slider__arrow slider__arrow--right"
             onClick={goToNext}
           >
-            ›
+            <img src={arrow_forward} alt="Flèche droite" />
           </button>
         </>
       )}
